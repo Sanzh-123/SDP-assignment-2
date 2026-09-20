@@ -1,0 +1,26 @@
+package com.logistics.app;
+
+import com.logistics.log.Logistics;
+import com.logistics.ui.Button;
+import com.logistics.ui.Checkbox;
+import com.logistics.ui.GUIFactory;
+
+public class DeliveryApplication {
+    private final GUIFactory guiFactory;
+    private final Logistics logistics;
+
+    public DeliveryApplication(GUIFactory guiFactory, Logistics logistics) {
+        this.guiFactory = guiFactory;
+        this.logistics = logistics;
+    }
+
+    public void run(String cargo, String destination) {
+        Button button = guiFactory.createButton();
+        Checkbox checkbox = guiFactory.createCheckbox();
+
+        button.paint();
+        checkbox.paint();
+
+        logistics.planDelivery(cargo, destination);
+    }
+}
