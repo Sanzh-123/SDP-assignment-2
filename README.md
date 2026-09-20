@@ -40,10 +40,10 @@ Prerequisites
 
 How to Build and Run
 Step 1: Compile the source code
-javac -d bin src/com/logistics/*.java src/com/logistics/*/*.java
+javac src/com/logistics/Main.java
 
 Step 2: Run the application
-java -cp bin com.logistics.Main <ROAD|SEA> <WINDOWS|MACOS>
+java -cp src com.logistics.Main ROAD WINDOWS
 
 Supported Input Values
 Delivery Modes: ROAD, SEA
